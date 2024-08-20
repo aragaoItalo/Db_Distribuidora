@@ -1,0 +1,9 @@
+CREATE TABLE AjustesEstoque (
+    ajuste_id INT PRIMARY KEY AUTO_INCREMENT,
+    produto_id INT,
+    data_ajuste DATE NOT NULL,
+    quantidade_ajustada INT,
+    motivo VARCHAR(255),
+    responsavel VARCHAR(255),
+    FOREIGN KEY (produto_id) REFERENCES Produtos(produto_id)
+);
